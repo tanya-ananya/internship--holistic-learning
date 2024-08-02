@@ -1,0 +1,24 @@
+<button class="nav-button" data-target="yin-yoga-asanas">
+  Yin Yoga Asanas
+</button>
+<button class="nav-button" data-target="teaching-methodology">
+  Teaching Methodology
+</button>
+<button class="nav-button" data-target="anatomy">
+  Anatomy, Physiology, & TCM
+</button>
+<button class="nav-button" data-target="bandhas">Bandhas</button>
+<button class="nav-button" data-target="practicum">Practicum</button>
+<button class="nav-button" data-target="daily-schedule">
+  Typical Daily Schedule
+</button>
+
+background-color: rgb(255, 251, 247);
+document.querySelectorAll('.nav-button').forEach(button => {
+button.addEventListener('click', () => { const target =
+button.getAttribute('data-target'); let url; switch (target) { case 'pranayama':
+url = 'pranayama.html'; break; case 'yin-yoga-asanas': url = 'asanas.html';
+break; case 'teaching-methodology': url = 'methodology.html'; break; case
+'anatomy': url = 'anatomy.html'; break; case 'bandhas': url = 'bandhas.html';
+break; case 'practicum': url = 'practicum.html'; break; case 'daily-schedule':
+url = 'schedule.html'; break; } location.href = url; }); });

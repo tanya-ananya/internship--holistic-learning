@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 30px;
+}
+
+.heading {
+    color: #8D6406;
+    font-family: 'Playfair Display';
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 38px;
+}
+
+.bar {
+    width: 250px; 
+    height: 4px; 
+    background-color: #8D6406;
+    position: relative;
+}
+
+.bar1 {
+    left: 0%;
+}
+
+.bar2 {
+    right: 0%;
+}
+
+.bar1::after, .bar2::after {
+    content: '';
+    position: absolute;
+    width: 12px; 
+    height: 12px; 
+    background-color: #8D6406; 
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bar1::after {
+    right: -6px; 
+}
+
+.bar2::after {
+    left: -6px; 
+}
+
+.middle-text {
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: center;
+    font-size: small;
+    font-family: "Lato", sans-serif;
+}
+
+.main-content {
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    font-family: 'Playfair Display';
+    font-size: 45px;
+    color: #8D6406;
+    transform: translate(50%, 180%);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button-bg-container {
+    position: relative;
+    display: flex;          /*CHANGE*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.tab-bg {
+    width: 20%;
+    max-width: 50%; 
+    height: auto;
+    margin-top: 60px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.button-container {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 13px; 
+    top: 15%;
+    left: 8%;
+}
+
+.btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 180px;
+    height: 70px;
+    border: 2px solid #8D6406;
+    border-radius: 50px;
+    color: #8D6406;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+}
+
+.main-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} 
+
+.main-image {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* .main-image {
+    position: absolute;
+} */
+
+
