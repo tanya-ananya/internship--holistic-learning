@@ -1,35 +1,48 @@
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function() {
-      const target = button.getAttribute('data-target');
-      let url;
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.button-container');
   
-      switch (target) {
-        case 'pranayama':
-          url = 'index.html';
-          break;
-        case 'asanas':
-          url = 'asana.html';
-          break;
-        case 'teaching-methodology':
-          url = 'methodology.html';
-          break;
-        case 'anatomy':
-          url = 'anatomy.html';
-          break;
-        case 'bandhas':
-          url = 'bandhas.html';
-          break;
-        case 'practicum':
-          url = 'practicum.html';
-          break;
-        case 'daily-schedule':
-          url = 'schedule.html';
-          break;
-      }
-  
-      if (url) {
-        location.href = url;
-      }
-    });
+  container.addEventListener('click', function(event) {
+    const button = event.target.closest('.btn');
+    if (!button) return;
+
+    const target = button.getAttribute('data-target');
+    const urls = {
+      'pranayama': 'index.html',
+      'asanas': 'asana.html',
+      'teaching-methodology': 'methodology.html',
+      'anatomy': 'anatomy.html',
+      'bandhas': 'bandhas.html',
+      'practicum': 'practicum.html',
+      'daily-schedule': 'schedule.html'
+    };
+
+    const url = urls[target];
+    if (url) {
+      location.href = url;
+    }
   });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.button-container');
   
+  container.addEventListener('click', function(event) {
+    const button = event.target.closest('.btn');
+    if (!button) return;
+
+    const target = button.getAttribute('data-target');
+    const urls = {
+      'pranayama': 'index.html',
+      'asanas': 'asana.html',
+      'teaching-methodology': 'methodology.html',
+      'anatomy': 'anatomy.html',
+      'bandhas': 'bandhas.html',
+      'practicum': 'practicum.html',
+      'daily-schedule': 'schedule.html'
+    };
+
+    const url = urls[target];
+    if (url) {
+      location.href = url;
+    }
+  });
+});
