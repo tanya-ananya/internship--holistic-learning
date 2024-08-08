@@ -1,28 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.btn');
-  const contents = document.querySelectorAll('.main-content .content');
+  const contents = document.querySelectorAll('.inner-content');
 
   buttons.forEach(button => {
     button.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent default button behavior
+      event.preventDefault(); 
 
       const target = button.getAttribute('data-target');
 
-      // Hide all content
       contents.forEach(content => {
         content.style.display = 'none';
       });
 
-      // Show the targeted content
-      const targetContent = document.querySelector(`.content[data-content="${target}"]`);
+      const targetContent = document.querySelector(`.inner-content[data-target="${target}"]`);
       if (targetContent) {
         targetContent.style.display = 'block';
       }
     });
   });
 
-  // Initialize by showing the first content or specific content
-  const initialContent = document.querySelector('.content[data-content="pranayama"]');
+  const initialContent = document.querySelector('.inner-content[data-target="pranayama"]');
   if (initialContent) {
     initialContent.style.display = 'block';
   }
