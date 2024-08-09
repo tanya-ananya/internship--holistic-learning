@@ -4,19 +4,19 @@
 }
 
 @font-face {
-  font-family: 'Lato';
+font-family: 'Lato';
   src: url('fonts/lato-regular-webfont.woff') format('woff'),
        url('fonts/lato-regular-webfont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+font-weight: normal;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Playfair Display';
-  src: url('fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
-       url('fonts/playfairdisplay-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+font-family: 'Playfair Display';
+src: url('fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
+     url('fonts/playfairdisplay-regular-webfont.woff') format('woff');
+font-weight: normal;
+font-style: normal;
 }
 
 .container {
@@ -71,11 +71,6 @@
   left: -6px;
 }
 
-.main-container {
-  display: flex;
-  align-items: flex-start;
-}
-
 .middle-text {
   padding: 5% 8% 0 8%;
   text-align: center;
@@ -91,7 +86,7 @@
 }
 
 .tab-bg {
-  width: 75%;
+  width: 90%;
   margin-top: 60px;
   position: relative;
 }
@@ -103,7 +98,7 @@
   flex-direction: column;
   gap: 10px;
   top: 12%;
-  left: 32%;
+  left: 35%;
 }
 
 .btn {
@@ -111,7 +106,7 @@
   justify-content: center;
   align-items: center;
   padding: 9% 5%;
-  width: 80%;
+  width: 100%;
   height: 75px;
   border: 2px solid #8D6406;
   border-radius: 50px;
@@ -119,14 +114,14 @@
   font-size: 17px;
   cursor: pointer;
   text-align: center;
-  margin: 2% 0;
+  margin: 2% 0 ;
   font-family: "Lato", sans-serif;
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
-  margin-left: -1%;
+  margin-left: 6%;
 }
 
 .title {
@@ -134,51 +129,45 @@
   font-size: 45px;
   color: #8D6406;
   text-align: center;
-  margin: 17% 0 6% 30%;
+  margin: 8% 0 3%;
 }
 
 .content {
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px; 
-}
-
-.content-inner {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
 }
 
 .main-image {
-  width: 70%;
-  height: 85%;
+  width: 50%;
+  height: 65%;
 }
 
 .description {
   max-width: 600px;
 }
 
-.description p, .description ul {
-  flex: 1;
+.description p,
+.description ul {
+    font-size: 21px;
+    color: #666;
+    font-family: "Lato";
 }
+
 .description p {
-  font-size: 21px;
-  color: #666;
-  line-height: 1.6;
   margin: 4% 15% 5% 7%;
-  font-family: "Lato";
 }
 
 .description ul {
-  list-style-type: disc;
-  padding-left: 10%; 
-  color: #666;
-  font-size: 20px;
-  font-family: "Lato";
+    list-style-type: disc;
+    padding-left: 10%;
 }
 
 .description li {
   margin-bottom: 10px;
   font-size: 20px;
+}
+
+.main-container {
+  display: flex;
+  align-items: flex-start;
 }
